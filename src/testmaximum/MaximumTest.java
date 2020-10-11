@@ -16,7 +16,7 @@ class MaximumTest {
 
 	@Test
 	public void givenSecondValueShouldReturnTrue() {
-		TestMax test = new TestMax(8, 11, 5);
+		TestMax test = new TestMax(8, 11, 5,8);
 		Integer actual = (Integer) test.findMaximum();
 		Integer expected = 11;
 		assertEquals(expected, actual);
@@ -24,9 +24,9 @@ class MaximumTest {
 
 	@Test
 	public void givenThirdValueShouldReturnTrue() {
-		TestMax test = new TestMax(9, 1, 15);
+		TestMax test = new TestMax(9, 1, 15,33);
 		Integer actual = (Integer) test.findMaximum();
-		Integer expected = 15;
+		Integer expected = 33;
 		assertEquals(expected, actual);
 	}
 
@@ -40,15 +40,15 @@ class MaximumTest {
 
 	@Test
 	public void givenSecondFloatValueShouldReturnTrue() {
-		TestMax test = new TestMax(2f, 8f, 6f);
+		TestMax test = new TestMax(2f, 28f, 6f,22f);
 		Float actual = (Float) test.findMaximum();
-		Float expected = 8f;
+		Float expected = 28f;
 		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void givenThirdFloatValueShouldReturnTrue() {
-		TestMax test = new TestMax(9f, 1f, 15f);
+		TestMax test = new TestMax(9f, 1f, 15f,14f);
 		Float actual = (Float) test.findMaximum();
 		Float expected = 15f;
 		assertEquals(expected, actual);
@@ -56,7 +56,7 @@ class MaximumTest {
 
 	@Test
 	public void givenFirstStringValueShouldReturnTrue() {
-		TestMax test = new TestMax("Peach", "Apple", "Banana");
+		TestMax test = new TestMax("Peach", "Apple", "Banana", "Cat");
 		String actual = (String) test.findMaximum();
 		String expected = "Peach";
 		assertEquals(expected, actual);
@@ -64,7 +64,7 @@ class MaximumTest {
 
 	@Test
 	public void givenSecondStringValueShouldReturnTrue() {
-		TestMax test = new TestMax("Apple", "Peach", "Banana");
+		TestMax test = new TestMax("Apple", "Peach", "Banana", "Fruits");
 		String actual = (String) test.findMaximum();
 		String expected = "Peach";
 		assertEquals(expected, actual);

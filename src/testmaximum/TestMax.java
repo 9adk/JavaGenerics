@@ -1,16 +1,20 @@
 package testmaximum;
 
+import java.util.Arrays;
 public class TestMax<T extends Comparable<T>> {
 	T a;
 	T b;
 	T c;
-
-	public TestMax(T a, T b, T c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
+	T[] args;
+	@SafeVarargs
+	public TestMax(T ...args) {
+		this.args = args;
 	}
-
+	
+	public T findMaximum() {
+		T test = findMaximum(args);
+		return test;
+	}
 	/**
 	 * Usecase1, Usecase2, Usecase3 modified for Usecase4
 	 * 
@@ -19,15 +23,10 @@ public class TestMax<T extends Comparable<T>> {
 	 * @param c
 	 * @return
 	 */
-	public T findMaximum() {
+	public T findMaximum(T ...args) {
 		T max;
-		if (a.compareTo(b) >= 0 && a.compareTo(c) >= 0) {
-			max = a;
-		} else if (b.compareTo(c) >= 0 && b.compareTo(a) >= 0) {
-			max = b;
-		} else {
-			max = c;
-		}
+		Arrays.sort(args);
+		max = args[args.length - 1];
 		return max;
 	}
 }
