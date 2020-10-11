@@ -1,6 +1,16 @@
 package testmaximum;
 
-public class TestMax {
+public class TestMax<T extends Comparable<T>> {
+	T a;
+	T b;
+	T c;
+
+	public TestMax(T a, T b, T c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
+
 	/**
 	 * Usecase1, Usecase2, Usecase3 modified for Usecase4
 	 * 
@@ -9,7 +19,7 @@ public class TestMax {
 	 * @param c
 	 * @return
 	 */
-	public <T extends Comparable<T>>T findMaximum(T a, T b, T c) {
+	public T findMaximum() {
 		T max;
 		if (a.compareTo(b) >= 0 && a.compareTo(c) >= 0) {
 			max = a;
