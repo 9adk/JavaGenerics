@@ -16,7 +16,7 @@ class MaximumTest {
 
 	@Test
 	public void givenSecondValueShouldReturnTrue() {
-		TestMax test = new TestMax(8, 11, 5,8);
+		TestMax test = new TestMax(8, 11, 5, 8);
 		Integer actual = (Integer) test.findMaximum();
 		Integer expected = 11;
 		assertEquals(expected, actual);
@@ -24,7 +24,7 @@ class MaximumTest {
 
 	@Test
 	public void givenThirdValueShouldReturnTrue() {
-		TestMax test = new TestMax(9, 1, 15,33);
+		TestMax test = new TestMax(9, 1, 15, 33);
 		Integer actual = (Integer) test.findMaximum();
 		Integer expected = 33;
 		assertEquals(expected, actual);
@@ -40,7 +40,7 @@ class MaximumTest {
 
 	@Test
 	public void givenSecondFloatValueShouldReturnTrue() {
-		TestMax test = new TestMax(2f, 28f, 6f,22f);
+		TestMax test = new TestMax(2f, 28f, 6f, 22f);
 		Float actual = (Float) test.findMaximum();
 		Float expected = 28f;
 		assertEquals(expected, actual);
@@ -48,7 +48,7 @@ class MaximumTest {
 
 	@Test
 	public void givenThirdFloatValueShouldReturnTrue() {
-		TestMax test = new TestMax(9f, 1f, 15f,14f);
+		TestMax test = new TestMax(9f, 1f, 15f, 14f);
 		Float actual = (Float) test.findMaximum();
 		Float expected = 15f;
 		assertEquals(expected, actual);
